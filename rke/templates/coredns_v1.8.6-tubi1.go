@@ -1,12 +1,6 @@
 package templates
 
-/*
-Rancher Changelog:
-# CoreDNS template with autoscaler liveness and readiness probe configuration
-*/
 const CoreDNSTemplateV186Tubi1 = `
-# Based on coredns/deployment/kubernetes/coredns.yaml.sed v1.8.3
----
 {{- if eq .RBACConfig "rbac"}}
 apiVersion: v1
 kind: ServiceAccount
