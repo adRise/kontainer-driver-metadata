@@ -319,9 +319,9 @@ spec:
           # When cluster is using large nodes(with more cores), "coresPerReplica" should dominate.
           # If using small nodes, "nodesPerReplica" should dominate.
 {{if .LinearAutoscalerParams}}
-          - --default-params={"ladder":{{.LinearAutoscalerParams}}}
+          - --default-params={"linear":{{.LinearAutoscalerParams}}}
 {{else}}
-          - --default-params={"ladder":{"coresToReplicas": [[1,1]],"nodesToReplicas":[[1, 1],[100, 50], [150, 75], [200, 100]],"min":1,"preventSinglePointFailure":true}}
+          - --default-params={"linear":{"coresPerReplica":128,"nodesPerReplica":4,"min":1,"preventSinglePointFailure":true}}
 {{end}}
           - --nodelabels=node-role.kubernetes.io/worker=true,beta.kubernetes.io/os=linux
           - --logtostderr=true
