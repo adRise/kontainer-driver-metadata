@@ -53,7 +53,7 @@ const (
 	coreDnsv117         = "coredns-v1.17"
 	coreDnsv183         = "coredns-v1.8.3"
 	coreDnsv183Rancher2 = "coredns-v1.8.3-rancher2"
-	coreDnsv186Tubi1    = "coredns-v1.8.6-tubi1"
+	coreDnsv186Tubi1    = "coredns-v1.8.6"
 
 	kubeDnsv18  = "kubedns-v1.8"
 	kubeDnsv116 = "kubedns-v1.16"
